@@ -45,3 +45,11 @@
 
   window.onload = () => main(HYF_REPOS_URL);
 }
+
+
+//createAndAppend('option', select, { html: t.name, value: index });
+        //console.log($options[index]);
+        //console.log(data[index].name);
+        
+        //index = index+1;
+        //document.querySelector('.select').addEventListener('change',(e) => console.log('jjjj'))

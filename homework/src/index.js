@@ -1,4 +1,5 @@
 'use strict';
+let index =  0;
 
 {
   function fetchJSON(url, cb) {
@@ -15,7 +16,7 @@
     xhr.onerror = () => cb(new Error('Network request failed'));
     xhr.send();
   }
-  // added per me
+  // added 
   let header= document.createElement('header');
     header.setAttribute("class", "header");
     root.appendChild(header);
@@ -56,6 +57,8 @@
       if (err) {
         createAndAppend('div', root, { html: err.message, class: 'alert-error' });
       } else {
+        
+
         createAndAppend('option', root, { html: JSON.stringify(data, null, 2) });
       }
     });
