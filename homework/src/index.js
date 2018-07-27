@@ -1,7 +1,6 @@
 'use strict';
 
-let index =  0;
-let repo = [];
+let index = 0;
 
 {
   function fetchJSON(url, cb) {
@@ -53,6 +52,9 @@ let repo = [];
         });
     return elem;
   }
+  /////
+ 
+/////  
 
   function main(url) {
     fetchJSON(url, (err, data) => {
@@ -67,12 +69,11 @@ let repo = [];
         // const $options= createAndAppend('option', $select,{html: repo.name});
         //createAndAppend('option', repo-selector, {html: repo.name, value:  index  });
         //createAndAppend('repositories', root,{html: t.name});
-        //index = index + 1;
+        index = index + 1;
         //createAndAppend('option', root, { html: JSON.stringify(data, null, 2) });
-        /// ////////createAndAppend('option', select, { html: data.name, value: index});
-        //createAndAppend('option', root, { html: data.name , value: index});
-         
-
+        /// //////// createAndAppend('option', select, { html: data.name, value: index});
+        createAndAppend('option', root, { html: data.name , value:index});
+        
       }
     });
   }
