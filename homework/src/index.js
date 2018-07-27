@@ -1,5 +1,7 @@
 'use strict';
+
 let index =  0;
+let repo = [];
 
 {
   function fetchJSON(url, cb) {
@@ -36,6 +38,7 @@ let index =  0;
       let right = document.createElement('div');
           right.setAttribute('class', 'right-div whiteframe');
           container.appendChild(right);
+          // const $options= createAndAppend('option', $select,{html: repo.name});
 // end of first add
       function createAndAppend(name, parent, options = {}) {
         const elem = document.createElement(name);
@@ -58,13 +61,26 @@ let index =  0;
         createAndAppend('div', root, { html: err.message, class: 'alert-error' });
       } else {
         
+        // for( const repo of REPOS){
+        //   const option = createAndAppend('option', root,{html: repo.name});
+        // }
+        // const $options= createAndAppend('option', $select,{html: repo.name});
+        //createAndAppend('option', repo-selector, {html: repo.name, value:  index  });
+        //createAndAppend('repositories', root,{html: t.name});
+        //index = index + 1;
+        //createAndAppend('option', root, { html: JSON.stringify(data, null, 2) });
+        /// ////////createAndAppend('option', select, { html: data.name, value: index});
+        //createAndAppend('option', root, { html: data.name , value: index});
+         
 
-        createAndAppend('option', root, { html: JSON.stringify(data, null, 2) });
       }
     });
   }
+      //document.querySelector('select').addEventListener('change', main(HYF_REPOS_URL)) => {
+      //document.querySelector('#content').innerHTML = '2';
 
-  const HYF_REPOS_URL = 'https://api.github.com/orgs/HackYourFuture/repos?per_page=100';
+      const HYF_REPOS_URL = 'https://api.github.com/orgs/HackYourFuture/repos?per_page=100';
 
-  window.onload = () => main(HYF_REPOS_URL);
+      window.onload = () => main(HYF_REPOS_URL);
+      //document.querySelector('select').addEventListener('change', main(HYF_REPOS_URL));
 }
